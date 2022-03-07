@@ -12,6 +12,8 @@ function UserList(props) {
                     id={ user.id }
                     name={ user.name }
                     email={ user.email }
+                    salary={ user.salary }
+                    photo={ user.photo }
                     isGoldClient={ user.isGoldClient }
                     key={ index }
                 />
