@@ -8,6 +8,7 @@ class App extends React.Component {
     super();
     this.state = {
       background: 'white',
+      colorText: 'black',
       users: []
     };
   }
@@ -26,6 +27,10 @@ class App extends React.Component {
 
   changeColor(event) {
     this.setState({background: event.target.value});
+  }
+
+  changeColorText(event) {
+    this.setState({colorText: event.target.value});
   }
 
   getMaxId(users) {
@@ -61,11 +66,17 @@ class App extends React.Component {
 
   render() {
     return(
-      <div className="app" style={{background: this.state.background}}>
+      <div className="app" style={{background: this.state.background, color: this.state.colorText}}>
         <h1>Admin panel - Proiectul 1</h1>
         <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
         <UserList users={this.state.users}/>
-        <input type="color" onChange={(event) => this.changeColor(event)}/>
+        <br/>
+        <label htmlFor="bg">Background Color</label>
+        <input type="color" name="bg" onChange={(event) => this.changeColor(event)}/>
+        <br/>
+        <label htmlFor="text">Text Color</label>
+        <input type="color" name="text" onChange={(event) => this.changeColorText(event)}/>
+        <br/>
       </div>
     );
   }
