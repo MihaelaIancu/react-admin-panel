@@ -2,6 +2,7 @@ import React from 'react';
 import UserList from './components/UserList';
 import UserAddForm from './components/UserAddForm';
 import './App.css';
+import PostList from './components/PostList';
 
 class App extends React.Component {
   constructor() {
@@ -9,7 +10,8 @@ class App extends React.Component {
     this.state = {
       background: 'white',
       colorText: 'black',
-      users: []
+      users: [],
+      posts: []
     };
   }
 
@@ -70,6 +72,8 @@ class App extends React.Component {
         <h1>Admin panel - Proiectul 1</h1>
         <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
         <UserList users={this.state.users}/>
+        <br/>
+        <PostList posts={this.state.posts}/>
         <br/>
         <label htmlFor="bg">Background Color</label>
         <input type="color" name="bg" onChange={(event) => this.changeColor(event)}/>
