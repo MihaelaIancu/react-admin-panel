@@ -20,16 +20,18 @@ class PostList extends React.Component{
 
   render() {
     const { posts } = this.state;
+    const { stareButon } = this.props;
       return(
         <div>
             <h2>Lista postarilor:</h2>
-            { posts.map((post, index) => {
-                return <PostItem
+            { stareButon === 'postari' && posts.map((post, index) => {
+                return (<PostItem
                     title = { post.title } 
                     id = { post.id }
                     body = { post.body }
                     key = { index }
                 />
+                );
             })}
         </div>
       );

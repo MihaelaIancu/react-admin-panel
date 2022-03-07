@@ -11,7 +11,8 @@ class App extends React.Component {
       background: 'white',
       colorText: 'black',
       users: [],
-      posts: []
+      stareButon: null,
+      message: 'default list'
     };
   }
 
@@ -33,6 +34,12 @@ class App extends React.Component {
 
   changeColorText(event) {
     this.setState({colorText: event.target.value});
+  }
+
+  changeInfo(event) {
+    console.log('click happened');
+    this.setState({stareButon: event.target.value});
+    this.setState({message: event.target.value});
   }
 
   getMaxId(users) {
@@ -70,10 +77,24 @@ class App extends React.Component {
     return(
       <div className="app" style={{background: this.state.background, color: this.state.colorText}}>
         <h1>Admin panel - Proiectul 1</h1>
-        <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
-        <UserList users={this.state.users}/>
+        
         <br/>
-        <PostList posts={this.state.posts}/>
+        <br/>
+        <button value="useri" onClick={(event) => this.changeInfo(event)}>Afiseaza useri</button>
+        <button value="postari" onClick={(event) => this.changeInfo(event)}>Afiseaza postari</button>
+        {
+        this.state.stareButon === 'useri' 
+          ? <div>
+            <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
+            <UserList users={this.state.users}/>
+            </div>
+          : this.state.stareButon === 'postari'
+            ?
+              <PostList stareButon={this.state.stareButon}/>
+            : <UserList users={this.state.users}/>
+        }
+        
+        <br/>
         <br/>
         <label htmlFor="bg">Background Color</label>
         <input type="color" name="bg" onChange={(event) => this.changeColor(event)}/>
