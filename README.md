@@ -1,6 +1,6 @@
 # JavaScript Advanced - Proiectul 1
 
-### Pentru a vedea proiectul, da click aici: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
+#### Pentru a vedea proiectul, da click aici: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
 
 
 ## Rularea proiectului
