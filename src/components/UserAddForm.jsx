@@ -1,5 +1,7 @@
 import React from 'react';
 import './UserAddForm.css';
+// import {debounce} from 'lodash';
+
 class UserAddForm extends React.Component {
     constructor(props) {
         super(props);
@@ -17,6 +19,7 @@ class UserAddForm extends React.Component {
     }
 
     updateEmail(event) {
+        // console.log(event.target.value);
         this.setState({email: event.target.value});
     }
 
@@ -32,7 +35,6 @@ class UserAddForm extends React.Component {
         this.setState({isGoldClient: event.target.checked});
     }
 
-
     render() {
         const {name, email, salary, photo, isGoldClient} = this.state;
 
@@ -46,13 +48,18 @@ class UserAddForm extends React.Component {
                 <input
                     type="text"
                     name="name"
+                    required = {true}
                     onChange={(event) => this.updateName(event)}
                 />
                 <label htmlFor="email">Email:</label>
                 <input
-                    type="text"
+                    type="email"
                     name="email"
-                    onChange={(event) => this.updateEmail(event)}
+                    required = {true}
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                    onChange={(event) => 
+                        this.updateEmail(event)  
+                    }
                 />
                 <label htmlFor="salary">Salary:</label>
                 <input

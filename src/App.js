@@ -12,7 +12,7 @@ class App extends React.Component {
       colorText: 'black',
       users: [],
       stareButon: null,
-      message: 'default list',
+      message: 'default list'
     };
 
     this.deleteItem = this.deleteItem.bind(this);
