@@ -32,6 +32,7 @@ class UserAddForm extends React.Component {
         this.setState({isGoldClient: event.target.checked});
     }
 
+
     render() {
         const {name, email, salary, photo, isGoldClient} = this.state;
 

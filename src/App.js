@@ -12,8 +12,10 @@ class App extends React.Component {
       colorText: 'black',
       users: [],
       stareButon: null,
-      message: 'default list'
+      message: 'default list',
     };
+
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   componentDidMount() {
@@ -25,7 +27,8 @@ class App extends React.Component {
           user.isGoldClient = false;
         });
         this.setState({users: data});
-      })
+        console.log({users: data});
+      })      
   }
 
   changeColor(event) {
@@ -52,6 +55,13 @@ class App extends React.Component {
     });
 
     return maxId;
+  }
+
+  deleteItem(index) {
+    const filteredUsers = this.state.users.filter(user => user.id!==index );
+    this.setState({
+      users:filteredUsers
+    });
   }
 
   submitAddForm(event, name, email, salary, photo, isGoldClient) {
@@ -86,12 +96,12 @@ class App extends React.Component {
         this.state.stareButon === 'useri' 
           ? <div>
             <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
-            <UserList users={this.state.users}/>
+            <UserList users={this.state.users} deleteItem = {this.deleteItem}/>
             </div>
           : this.state.stareButon === 'postari'
             ?
               <PostList stareButon={this.state.stareButon}/>
-            : <UserList users={this.state.users}/>
+            : <UserList users={this.state.users} deleteItem = {this.deleteItem}/>
         }
         
         <br/>

@@ -18,6 +18,7 @@ function UserItem(props) {
                 ? <h3>Client GOLD</h3>
                 : null
             }
+            
         </div>
     );
 }
