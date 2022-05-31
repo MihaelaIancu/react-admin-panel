@@ -1,6 +1,6 @@
-# JavaScript Advanced - Proiectul 1
+# JavaScript Advanced - Project 1
 
-#### Pentru a vedea proiectul, da click aici: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
+#### Pentru rezultatul final, click here: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
 
 
 ## Rularea proiectului
@@ -9,11 +9,11 @@
 
 #### 2. `cd react-admin-panel`
 
-#### 3. `npm install` (posibil sa dureze)
+#### 3. `npm install` 
 
 #### 4. `npm start`
 
-## Cursuri precedente
+## Cursuri precedente - JavaScript Advanced - [Telecom Academy](https://www.telacad.ro/toate-cursurile/cursuri-web-development-self-study/)
 
 Pentru a vedea progresiv cum a fost realizat acest proiect urmariti urmatoarele repo-uri. Comentariile/console.log-urile din fiecare fisier sunt specifice cursurului la care au fost facute. Versiunea finala este fara comentarii sau console.log-uri.
 
