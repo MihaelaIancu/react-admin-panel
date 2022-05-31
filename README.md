@@ -1,7 +1,7 @@
 # JavaScript Advanced - Project 1
 
 #### Pentru rezultatul final, click aici: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
-
+##### To see the project, click here: [https://MihaelaIancu.github.io/react-project-1](https://MihaelaIancu.github.io/react-project-1).
 
 ## Rularea proiectului
 
