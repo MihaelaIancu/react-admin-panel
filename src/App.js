@@ -3,6 +3,10 @@ import UserList from './components/UserList';
 import UserAddForm from './components/UserAddForm';
 import './App.css';
 import PostList from './components/PostList';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faTrash);
 
 class App extends React.Component {
   constructor() {
@@ -95,7 +99,8 @@ class App extends React.Component {
         {
         this.state.stareButon === 'useri' 
           ? <div>
-            <UserAddForm submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
+            <UserAddForm
+            submitAddForm={(event, name, email, salary, photo, isGoldClient) => this.submitAddForm(event, name, email, salary, photo, isGoldClient)}/>
             <UserList users={this.state.users} deleteItem = {this.deleteItem}/>
             </div>
           : this.state.stareButon === 'postari'
@@ -106,12 +111,14 @@ class App extends React.Component {
         
         <br/>
         <br/>
-        <label htmlFor="bg">Background Color</label>
-        <input type="color" name="bg" onChange={(event) => this.changeColor(event)}/>
-        <br/>
-        <label htmlFor="text">Text Color</label>
-        <input type="color" name="text" onChange={(event) => this.changeColorText(event)}/>
-        <br/>
+        <div id="colors">
+          <label htmlFor="bg">Background Color</label>
+          <input type="color" name="bg" onChange={(event) => this.changeColor(event)}/>
+          <br/>
+          <label htmlFor="text">Text Color</label>
+          <input type="color" name="text" onChange={(event) => this.changeColorText(event)}/>
+          <br/>
+        </div>
       </div>
     );
   }

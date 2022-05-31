@@ -6,3 +6,41 @@
 .app h1 {
   margin-top: 0;
 }
+
+body {
+  background-color: #F1EEE9;
+}
+
+.app {
+  background-color: #3f3160;
+  min-height: 500px;
+  width: 800px;
+  margin: 40px auto;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+button {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #15133C;
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+  margin-right: 15px;
+}
+
+#colors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  border: 0;
+  background-color: transparent;
+  font-weight: bolder;
+  color: #15133C;
+  margin-left: 5px;
+}
+

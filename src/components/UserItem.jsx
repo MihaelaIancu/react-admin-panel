@@ -10,7 +10,7 @@ function UserItem(props) {
             <p>{ salary }</p>
            {
                photo 
-               ? <img src={ photo } alt="profile_picture"/>
+               ? <img height="100px" src={ photo } alt="profile_picture"/>
                : null
            }
             

@@ -1,0 +1,22 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    color: #fff;
+    width: 83%;
+    background-color: #73777B;
+    /* height: 100px; */
+    margin: 10px 1px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+p {
+    margin: 0px;
+}
+
+#header-post{
+    margin: 40px 5px;
+}
+

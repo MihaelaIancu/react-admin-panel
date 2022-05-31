@@ -1,5 +1,7 @@
 import React from 'react';
 import PostItem from './PostItem';
+import './PostList.css'
+// import FlipMove from "react-flip-move";
 
 class PostList extends React.Component{
     constructor(props) {
@@ -23,7 +25,8 @@ class PostList extends React.Component{
     const { stareButon } = this.props;
       return(
         <div>
-            <h2>Lista postarilor:</h2>
+            <h2 id="header-post">Lista postarilor:</h2>
+            <div className='post-list'>
             { stareButon === 'postari' && posts.map((post, index) => {
                 return (<PostItem
                     title = { post.title } 
@@ -33,6 +36,7 @@ class PostList extends React.Component{
                 />
                 );
             })}
+            </div>
         </div>
       );
   }

@@ -44,15 +44,17 @@ class UserAddForm extends React.Component {
                 onSubmit={(event) => this.props.submitAddForm(event, name, email, salary, photo, isGoldClient)}
             >
                 <h2>Adauga utilizatori:</h2>
-                <label htmlFor="name">Nume:</label>
+                {/* <label htmlFor="name">Nume:</label> */}
                 <input
+                    placeholder='Nume'
                     type="text"
                     name="name"
                     required = {true}
                     onChange={(event) => this.updateName(event)}
                 />
-                <label htmlFor="email">Email:</label>
+                {/* <label htmlFor="email">Email:</label> */}
                 <input
+                    placeholder='Email'
                     type="email"
                     name="email"
                     required = {true}
@@ -61,27 +63,30 @@ class UserAddForm extends React.Component {
                         this.updateEmail(event)  
                     }
                 />
-                <label htmlFor="salary">Salary:</label>
+                {/* <label htmlFor="salary">Salary:</label> */}
                 <input
+                    placeholder='Salariu'
                     type="number"
                     name="salary"
                     onChange={(event) => this.updateSalary(event)}
                 />
-                <label htmlFor="photo">Profile:</label>
+                {/* <label htmlFor="photo">Profile:</label> */}
                 <input
+                    placeholder='URL-ul unei poze care te reprezinta...'
                     type="text"
                     name="photo"
                     onChange={(event) => this.updatePhoto(event)}
                 />
-                <label htmlFor="is-gold-client">Client GOLD</label>
-                <input
-                    type="checkbox"
-                    name="is-gold-client"
-                    value="true"
-                    onChange={(event) => this.updateIsGoldClient(event)}
-                />
-
-                <input type="submit" value="Introdu utilizatorul"/>
+                <div id="check">
+                    <label htmlFor="is-gold-client" >Client GOLD</label>
+                    <input
+                        type="checkbox"
+                        name="is-gold-client"
+                        value="true"
+                        onChange={(event) => this.updateIsGoldClient(event)}
+                    />
+                </div>
+                <input id="submit" type="submit" value="Introdu utilizatorul"/>
             </form>
         )
     }
